@@ -19,3 +19,7 @@ let &t_AF="\e[38;5;%dm"
 set number
 syntax on
 colorscheme itg_flat
+filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
