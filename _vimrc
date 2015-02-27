@@ -8,6 +8,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'cdmedia/itg_flat_vim'
 Plugin 'kongo2002/fsharp-vim'
+Plugin 'kien/ctrlp.vim'
+
 call vundle#end()
 filetype plugin indent on
 
