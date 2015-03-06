@@ -17,8 +17,8 @@ Plugin 'itchyny/lightline.vim'
 call vundle#end()
 
 " Encoding Settings
-set encoding=utf-8
-set termencoding=utf8
+"set encoding=utf-8
+"set termencoding=utf8
 set term=xterm
 set t_Co=256
 let &t_AB="\e[48;5;%dm"
