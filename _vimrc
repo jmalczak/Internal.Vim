@@ -14,7 +14,7 @@ set nocompatible
     " Common Plugins
     Plugin 'gmarik/Vundle.vim'
     Plugin 'leafgarland/typescript-vim'
-    Plugin 'cdmedia/itg_flat_vim'
+    Plugin 'benjaminwhite/benokai'
     Plugin 'kongo2002/fsharp-vim'
     Plugin 'kien/ctrlp.vim'
     Plugin 'scrooloose/nerdtree'
@@ -44,7 +44,7 @@ set nocompatible
     filetype plugin indent on
     set number
     syntax on
-    colorscheme itg_flat
+    colorscheme benokai
     filetype plugin indent on
     set tabstop=4
     set shiftwidth=4
