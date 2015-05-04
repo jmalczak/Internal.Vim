@@ -50,6 +50,7 @@ set nocompatible
     set shiftwidth=4
     set expandtab
     set laststatus=2
+    set spell
 "}
 
 " Keyboard Mappings {
