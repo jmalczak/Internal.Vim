@@ -27,6 +27,11 @@ set nocompatible
         \ }
 
     Plugin 'bling/vim-bufferline'
+    Plugin 'godlygeek/tabular'
+    Plugin 'plasticboy/vim-markdown'
+
+        " plugin 'plasticboy/vim-markdown' configuration
+        let g:vim_markdown_folding_disabled=1
 
     call vundle#end()
 
@@ -51,6 +56,9 @@ set nocompatible
     set expandtab
     set laststatus=2
     set spell
+    set hls
+    set incsearch 
+    highlight Search ctermbg=yellow ctermfg=black cterm=NONE 
 "}
 
 " Keyboard Mappings {
