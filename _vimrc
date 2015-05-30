@@ -68,4 +68,5 @@ set nocompatible
     nnoremap ; :
     vnoremap ; :
     map <C-n> :NERDTreeToggle<CR>
+    inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 "}
