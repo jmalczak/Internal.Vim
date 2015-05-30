@@ -66,7 +66,7 @@ set nocompatible
 "}
 
 " Keyboard Mappings {
-    inoremap ii <esc>
+    inoremap <C-l> <esc>
     nnoremap ; :
     vnoremap ; :
     map <C-n> :NERDTreeToggle<CR>
