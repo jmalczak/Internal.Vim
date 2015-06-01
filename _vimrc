@@ -57,7 +57,7 @@ set nocompatible
     set expandtab
     set smartindent
     set laststatus=2
-    set spell
+    set nospell
     set hls
     set incsearch 
     highlight Search ctermbg=yellow ctermfg=black cterm=NONE 
