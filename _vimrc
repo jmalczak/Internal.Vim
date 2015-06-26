@@ -32,6 +32,7 @@ set nocompatible
 
         " plugin 'plasticboy/vim-markdown' configuration
         let g:vim_markdown_folding_disabled=1
+    Plugin 'xsunsmile/showmarks'   
 
     call vundle#end()
 
