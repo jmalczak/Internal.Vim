@@ -33,7 +33,10 @@ set nocompatible
         " plugin 'plasticboy/vim-markdown' configuration
         let g:vim_markdown_folding_disabled=1
     Plugin 'xsunsmile/showmarks'   
-
+    Plugin 'vim-scripts/SearchComplete'
+    Plugin 'vim-scripts/surround.vim'
+    Plugin 'vim-scripts/matchit.zip'
+    
     call vundle#end()
 
 "}
@@ -59,7 +62,6 @@ set nocompatible
     set smartindent
     set laststatus=2
     set nospell
-    set hls
     set incsearch 
     highlight Search ctermbg=yellow ctermfg=black cterm=NONE 
     highlight Search guibg=yellow guifg=black term=NONE 
@@ -70,6 +72,8 @@ set nocompatible
     inoremap jj <esc>
     nnoremap ; :
     vnoremap ; :
+    nnoremap : ;
+    vnoremap : ;
     map <C-n> :NERDTreeToggle<CR>
     inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 "}
