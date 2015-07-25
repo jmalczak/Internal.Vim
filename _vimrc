@@ -72,6 +72,7 @@ set nocompatible
 
 " Keyboard Mappings {
     inoremap jj <esc>
+    vnoremap y ygv<ESC>
     nnoremap ; :
     vnoremap ; :
     nnoremap : ;
