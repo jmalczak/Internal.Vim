@@ -63,6 +63,8 @@ set nocompatible
     set laststatus=2
     set nospell
     set incsearch 
+    set lazyredraw
+    set ttyfast
     highlight Search ctermbg=yellow ctermfg=black cterm=NONE 
     highlight Search guibg=yellow guifg=black term=NONE 
     set guifont=Lucida_Console:h10:cEASTEUROPE
