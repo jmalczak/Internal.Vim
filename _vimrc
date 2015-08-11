@@ -67,7 +67,7 @@ set nocompatible
     set ttyfast
     highlight Search ctermbg=yellow ctermfg=black cterm=NONE 
     highlight Search guibg=yellow guifg=black term=NONE 
-    set guifont=Lucida_Console:h10:cEASTEUROPE
+    set guifont=Lucida_Console:h12:cEASTEUROPE
 "}
 
 " Keyboard Mappings {
