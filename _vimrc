@@ -33,13 +33,7 @@ set nocompatible
 
 "}
 
-" Terminal encoding settings {
-    set t_Co=256
-"}
-
-
 " Edit settings {
-    filetype plugin indent on
     set number
     syntax on
     filetype plugin indent on
