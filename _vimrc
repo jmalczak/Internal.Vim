@@ -60,4 +60,16 @@ set nocompatible
     vnoremap : ;
     map <C-n> :NERDTreeToggle<CR>
     inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
+
+    " CTRL-X and SHIFT-Del are Cut
+    vnoremap <C-X> "+x
+    vnoremap <S-Del> "+x
+
+    " CTRL-C and CTRL-Insert are Copy
+    vnoremap <C-C> "+y
+    vnoremap <C-Insert> "+y
+
+    " CTRL-V and SHIFT-Insert are Paste
+    map <C-V>   	"+gP
+    map <S-Insert>  	"+gP
 "}
