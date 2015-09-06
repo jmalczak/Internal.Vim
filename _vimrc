@@ -16,12 +16,15 @@ set nocompatible
     Plugin 'leafgarland/typescript-vim'
     Plugin 'kongo2002/fsharp-vim'
     Plugin 'kien/ctrlp.vim'
+        "plugin 'kien/ctrlp.vim' configuration
+        let g:ctrlp_custom_ignore = {
+                    \ 'dir' : '\v[\/](node_modules|_bower_components)|(.git|.swp)$'
+                    \ }
     Plugin 'scrooloose/nerdtree'
     Plugin 'itchyny/lightline.vim'
     Plugin 'bling/vim-bufferline'
     Plugin 'godlygeek/tabular'
     Plugin 'plasticboy/vim-markdown'
-
         " plugin 'plasticboy/vim-markdown' configuration
         let g:vim_markdown_folding_disabled=1
     Plugin 'xsunsmile/showmarks'   
