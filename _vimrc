@@ -53,6 +53,7 @@ set nocompatible
     highlight Search ctermbg=yellow ctermfg=black cterm=NONE 
     highlight Search guibg=yellow guifg=black term=NONE 
     set guifont=Lucida_Console:h12:cEASTEUROPE
+    hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 "}
 
 " Keyboard Mappings {
