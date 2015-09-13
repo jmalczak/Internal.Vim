@@ -31,6 +31,7 @@ set nocompatible
     Plugin 'vim-scripts/SearchComplete'
     Plugin 'vim-scripts/surround.vim'
     Plugin 'vim-scripts/matchit.zip'
+    Plugin 'vim-scripts/SyntaxAttr.vim'
     
     call vundle#end()
 
@@ -50,10 +51,11 @@ set nocompatible
     set incsearch 
     set lazyredraw
     set ttyfast
-    highlight Search ctermbg=yellow ctermfg=black cterm=NONE 
-    highlight Search guibg=yellow guifg=black term=NONE 
+    hi Search ctermbg=NONE ctermfg=Yellow cterm=NONE 
+    hi Search guibg=NONE guifg=Yellow term=NONE 
+    hi CursorLine cterm=NONE ctermbg=NONE ctermfg=Yellow guibg=NONE guifg=Yellow
+    hi Underlined cterm=NONE ctermbg=NONE ctermfg=Yellow guibg=NONE guifg=Yellow
     set guifont=Lucida_Console:h12:cEASTEUROPE
-    hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 "}
 
 " Keyboard Mappings {
