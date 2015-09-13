@@ -64,7 +64,7 @@ set nocompatible
     vnoremap ; :
     nnoremap : ;
     vnoremap : ;
-    map <C-n> :NERDTreeToggle<CR>
+    nnoremap <F4> :NERDTreeToggle<CR>
     inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 
     " CTRL-X and SHIFT-Del are Cut
