@@ -38,6 +38,7 @@ set nocompatible
 "}
 
 " Edit settings {
+    set backspace=indent,eol,start
     set number
     syntax on
     filetype plugin indent on
