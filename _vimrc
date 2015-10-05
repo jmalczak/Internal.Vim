@@ -48,6 +48,8 @@ set nocompatible
 "}
 
 " Edit settings {
+    language messages en
+    set encoding=utf-8
     set backspace=indent,eol,start
     set number
     syntax on
@@ -67,6 +69,8 @@ set nocompatible
     hi CursorLine cterm=NONE ctermbg=NONE ctermfg=Yellow guibg=NONE guifg=Yellow
     hi Underlined cterm=NONE ctermbg=NONE ctermfg=Yellow guibg=NONE guifg=Yellow
     set guifont=Lucida_Console:h12:cEASTEUROPE
+    set shell=powershell
+    set shellcmdflag=-command
 "}
 
 " Keyboard Mappings {
