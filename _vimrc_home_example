@@ -1,2 +1,3 @@
-set rtp+=D:\$PATH_TO_VIM_GIT_FOLDER\vim\.vim\bundle\Vundle.vim
-source D:\$PATH_TO_VIM_GIT_FOLDER\vim\_vimrc
+set rtp+=$PATH_TO_VIM_GIT_FOLDER\.vim\bundle\Vundle.vim
+set runtimepath+=$PATH_TO_VIM_GIT_FOLDER
+source $PATH_TO_VIM_GIT_FOLDER\_vimrc
