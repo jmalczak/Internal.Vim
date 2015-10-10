@@ -1,2 +1,2 @@
-set shell=powershell
-set shellcmdflag=-command
+"set shell=powershell
+"set shellcmdflag=-command
