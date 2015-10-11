@@ -18,3 +18,6 @@ runtime configuration\other.vim
 
 " Keyboard mappings
 runtime configuration\mapping.vim
+
+" Backup settings
+runtime configuration\backup.vim

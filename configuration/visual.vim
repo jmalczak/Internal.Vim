@@ -9,5 +9,14 @@ filetype plugin indent on
 
 hi Search ctermbg=NONE ctermfg=Yellow cterm=NONE 
 hi Search guibg=NONE guifg=Yellow term=NONE 
-hi CursorLine cterm=NONE ctermbg=NONE ctermfg=Yellow guibg=NONE guifg=Yellow
 hi Underlined cterm=NONE ctermbg=NONE ctermfg=Yellow guibg=NONE guifg=Yellow
+
+" show 100 characters column
+:set colorcolumn=100
+
+" style of colorcolumn
+:highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+
+" highlight curren line 
+:set cursorline
+hi CursorLine cterm=NONE ctermbg=lightgray ctermfg=black guibg=lightgray guifg=black
