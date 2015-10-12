@@ -7,6 +7,11 @@ vnoremap ; :
 nnoremap : ;
 vnoremap : ;
 
+" map leader i to esc
+inoremap <leader>i <ESC>
+nnoremap <leader>i <ESC>
+vnoremap <leader>i <ESC>
+
 " NERD Tree
 nnoremap <silent> <F4> :NERDTreeToggle<CR>
 nnoremap <silent> <F5> :NERDTreeFind<CR>

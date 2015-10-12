@@ -7,6 +7,9 @@ set number
 syntax on
 filetype plugin indent on
 
+" color scheme
+colorscheme koehler
+
 hi Search ctermbg=NONE ctermfg=Yellow cterm=NONE 
 hi Search guibg=NONE guifg=Yellow term=NONE 
 hi Underlined cterm=NONE ctermbg=NONE ctermfg=Yellow guibg=NONE guifg=Yellow
@@ -19,4 +22,4 @@ hi Underlined cterm=NONE ctermbg=NONE ctermfg=Yellow guibg=NONE guifg=Yellow
 
 " highlight curren line 
 :set cursorline
-hi CursorLine cterm=NONE ctermbg=lightgray ctermfg=black guibg=lightgray guifg=black
+hi CursorLine  term=underline cterm=NONE ctermbg=darkblue ctermfg=NONE guibg=NONE guifg=NONE
