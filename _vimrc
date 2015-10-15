@@ -21,7 +21,7 @@ if !isdirectory(&undodir)
   call mkdir(&undodir, "p")
 endif
 " set time vim waits for next character
-set timeoutlen=200
+set timeoutlen=600
 
 " set leader key
 let mapleader = "\<Space>"
@@ -50,6 +50,8 @@ cnoremap <C-n> <Down>
 " Copy and paste
 nnoremap <leader>y "+y
 nnoremap <leader>p "+p
+vnoremap <leader>y "+y
+vnoremap <leader>p "+p
 
 " Map cursor to move screen line wise not file line wise, good for long lines
 nnoremap k gk
@@ -62,6 +64,9 @@ nnoremap <silent> <c-l> <c-w>l
 nnoremap <silent> <c-j> <c-w>j
 nnoremap <silent> <c-h> <c-w>h
 nnoremap <silent> <c-k> <c-w>k
+
+" map standard undo
+:map <C-z> u
 " fix issue with backspace before edit
 set backspace=indent,eol,start
 set tabstop=4
