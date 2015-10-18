@@ -143,6 +143,8 @@ Plugin 'kien/ctrlp.vim'
                 \ 'dir' : '\v[\/](node_modules|_bower_components)|(.git|.swp)$'
                 \ }
 Plugin 'scrooloose/nerdtree'
+    " plugin 'scrooloose/nerdtree" configuration
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif      
 Plugin 'itchyny/lightline.vim'
 Plugin 'bling/vim-bufferline'
 Plugin 'godlygeek/tabular'
