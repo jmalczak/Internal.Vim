@@ -36,5 +36,6 @@ Plugin 'scrooloose/syntastic'
     let g:syntastic_check_on_wq = 0
 
 Plugin 'rking/ag.vim'
+Plugin 'PProvost/vim-ps1'
 
 call vundle#end()
