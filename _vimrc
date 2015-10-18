@@ -42,6 +42,7 @@ nnoremap <silent> <F5> :NERDTreeFind<CR>
 " ctrl p
 noremap <leader>e :CtrlP<cr>
 nnoremap <leader>E :CtrlPMixed<cr>
+nnoremap <leader>b :CtrlPBuffer<cr>
 
 " fix ctrl p keys
 cnoremap <C-p> <Up>
