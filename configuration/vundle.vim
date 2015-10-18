@@ -37,5 +37,7 @@ Plugin 'scrooloose/syntastic'
 
 Plugin 'rking/ag.vim'
 Plugin 'PProvost/vim-ps1'
+    " plugin PProvost/vim-ps1 configuration
+    au BufRead,BufNewFile *.ps1 set filetype=ps1
 
 call vundle#end()
