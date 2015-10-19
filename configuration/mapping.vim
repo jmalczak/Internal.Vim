@@ -18,8 +18,8 @@ nnoremap <silent> <F4> :NERDTreeToggle<CR>
 nnoremap <silent> <F5> :NERDTreeFind<CR>
 
 " ctrl p
-noremap <leader>e :CtrlP<cr>
-nnoremap <leader>E :CtrlPMixed<cr>
+nnoremap <leader>e :CtrlP .<cr>
+nnoremap <leader>E :CtrlP<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
 
 " fix ctrl p keys
