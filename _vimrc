@@ -130,7 +130,7 @@ hi Underlined cterm=NONE ctermbg=NONE ctermfg=Yellow guibg=NONE guifg=Yellow
 
 " highlight curren line 
 :set cursorline
-hi CursorLine  term=underline cterm=NONE ctermbg=darkblue ctermfg=NONE guibg=NONE guifg=NONE
+hi CursorLine term=NONE cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 " Vundle Install Part
 call vundle#begin()
 
@@ -152,6 +152,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
     " plugin 'plasticboy/vim-markdown' configuration
     let g:vim_markdown_folding_disabled=1
+    au BufRead,BufNewFile *.md set filetype=markdown
 Plugin 'xsunsmile/showmarks'   
 Plugin 'vim-scripts/SearchComplete'
 Plugin 'vim-scripts/surround.vim'
@@ -167,10 +168,8 @@ Plugin 'scrooloose/syntastic'
     let g:syntastic_auto_loc_list = 1
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
-
 Plugin 'rking/ag.vim'
 Plugin 'PProvost/vim-ps1'
     " plugin PProvost/vim-ps1 configuration
     au BufRead,BufNewFile *.ps1 set filetype=ps1
-
 call vundle#end()

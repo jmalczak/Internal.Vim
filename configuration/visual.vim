@@ -22,4 +22,4 @@ hi Underlined cterm=NONE ctermbg=NONE ctermfg=Yellow guibg=NONE guifg=Yellow
 
 " highlight curren line 
 :set cursorline
-hi CursorLine  term=underline cterm=NONE ctermbg=darkblue ctermfg=NONE guibg=NONE guifg=NONE
+hi CursorLine term=NONE cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
