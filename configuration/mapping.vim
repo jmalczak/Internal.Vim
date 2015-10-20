@@ -47,3 +47,7 @@ nnoremap <silent> <c-k> <c-w>k
 
 " map standard undo
 :map <C-z> u
+
+" map angle brackets to preserve selection in visual mode
+vmap < <gv
+vmap > >gv

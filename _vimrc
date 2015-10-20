@@ -69,6 +69,10 @@ nnoremap <silent> <c-k> <c-w>k
 
 " map standard undo
 :map <C-z> u
+
+" map angle brackets to preserve selection in visual mode
+vmap < <gv
+vmap > >gv
 " fix issue with backspace before edit
 set backspace=indent,eol,start
 set tabstop=4
