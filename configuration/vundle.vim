@@ -8,7 +8,7 @@ Plugin 'kongo2002/fsharp-vim'
 Plugin 'kien/ctrlp.vim'
     "plugin 'kien/ctrlp.vim' configuration
     let g:ctrlp_custom_ignore = {
-                \ 'dir' : '\v[\/](node_modules|_bower_components)|(.git|.swp)$'
+                \ 'dir' : '\v[\/](node_modules|_bower_components|packages|bin|obj)|(.git|.swp)$'
                 \ }
 Plugin 'scrooloose/nerdtree'
     " plugin 'scrooloose/nerdtree" configuration

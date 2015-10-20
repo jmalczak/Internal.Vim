@@ -1,5 +1,5 @@
 " set time vim waits for next character
-set timeoutlen=600
+set timeoutlen=400
 
 " set leader key
 let mapleader = "\<Space>"
@@ -11,7 +11,8 @@ nnoremap : ;
 vnoremap : ;
 
 " map leader i to esc
-inoremap ii <ESC>
+inoremap 8 <ESC>
+inoremap 88 8
 
 " NERD Tree
 nnoremap <silent> <F4> :NERDTreeToggle<CR>

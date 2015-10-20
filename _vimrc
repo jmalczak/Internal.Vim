@@ -21,7 +21,7 @@ if !isdirectory(&undodir)
   call mkdir(&undodir, "p")
 endif
 " set time vim waits for next character
-set timeoutlen=600
+set timeoutlen=400
 
 " set leader key
 let mapleader = "\<Space>"
@@ -33,7 +33,8 @@ nnoremap : ;
 vnoremap : ;
 
 " map leader i to esc
-inoremap ii <ESC>
+inoremap 8 <ESC>
+inoremap 88 8
 
 " NERD Tree
 nnoremap <silent> <F4> :NERDTreeToggle<CR>
@@ -141,7 +142,7 @@ Plugin 'kongo2002/fsharp-vim'
 Plugin 'kien/ctrlp.vim'
     "plugin 'kien/ctrlp.vim' configuration
     let g:ctrlp_custom_ignore = {
-                \ 'dir' : '\v[\/](node_modules|_bower_components)|(.git|.swp)$'
+                \ 'dir' : '\v[\/](node_modules|_bower_components|packages|bin|obj)|(.git|.swp)$'
                 \ }
 Plugin 'scrooloose/nerdtree'
     " plugin 'scrooloose/nerdtree" configuration
