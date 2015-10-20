@@ -75,8 +75,12 @@ vmap < <gv
 vmap > >gv
 
 " map tab to autocomplete in insert mode
-:imap <Tab> <C-P>
-:imap <S-Tab> <C-N>
+:imap <S-Tab> <C-P>
+
+" indent as in Visual Studio
+nnoremap <C-K><C-R> 1G=G
+inoremap <C-K><C-R> 1G=G
+vnoremap <C-K><C-R> 1G=G
 " fix issue with backspace before edit
 set backspace=indent,eol,start
 set tabstop=4
