@@ -73,6 +73,10 @@ nnoremap <silent> <c-k> <c-w>k
 " map angle brackets to preserve selection in visual mode
 vmap < <gv
 vmap > >gv
+
+" map tab to autocomplete in insert mode
+:imap <Tab> <C-P>
+:imap <S-Tab> <C-N>
 " fix issue with backspace before edit
 set backspace=indent,eol,start
 set tabstop=4
