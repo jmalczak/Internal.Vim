@@ -166,21 +166,10 @@ Plugin 'plasticboy/vim-markdown'
     " plugin 'plasticboy/vim-markdown' configuration
     let g:vim_markdown_folding_disabled=1
     au BufRead,BufNewFile *.md set filetype=markdown
-Plugin 'xsunsmile/showmarks'   
 Plugin 'vim-scripts/SearchComplete'
 Plugin 'vim-scripts/surround.vim'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'vim-scripts/SyntaxAttr.vim'
-Plugin 'scrooloose/syntastic'
-    " plugn scrooloose/syntastic configuration
-    set statusline+=%#warningmsg#
-    set statusline+=%{SyntasticStatuslineFlag()}
-    set statusline+=%*
-
-    let g:syntastic_always_populate_loc_list = 1
-    let g:syntastic_auto_loc_list = 1
-    let g:syntastic_check_on_open = 1
-    let g:syntastic_check_on_wq = 0
 Plugin 'rking/ag.vim'
 Plugin 'PProvost/vim-ps1'
     " plugin PProvost/vim-ps1 configuration
