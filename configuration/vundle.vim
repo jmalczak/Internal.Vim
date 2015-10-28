@@ -14,10 +14,6 @@ Plugin 'scrooloose/nerdtree'
     " plugin 'scrooloose/nerdtree" configuration
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif      
 Plugin 'itchyny/lightline.vim'
-    " plugin itchyny/lightline.vim configuration
-     let g:lightline = {
-          \ 'colorscheme': 'wombat',
-          \ }
 Plugin 'bling/vim-bufferline'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
@@ -32,4 +28,5 @@ Plugin 'rking/ag.vim'
 Plugin 'PProvost/vim-ps1'
     " plugin PProvost/vim-ps1 configuration
     au BufRead,BufNewFile *.ps1 set filetype=ps1
+Plugin 'crusoexia/vim-monokai'
 call vundle#end()
