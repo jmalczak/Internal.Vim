@@ -14,6 +14,10 @@ Plugin 'scrooloose/nerdtree'
     " plugin 'scrooloose/nerdtree" configuration
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif      
 Plugin 'itchyny/lightline.vim'
+    " plugin itchyny/lightline.vim configuration
+     let g:lightline = {
+          \ 'colorscheme': 'wombat',
+          \ }
 Plugin 'bling/vim-bufferline'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
