@@ -124,6 +124,8 @@ language messages en
 set encoding=utf-8
 set guifont=Lucida_Console:h12:cEASTEUROPE
 
+set t_Co=256
+
 set number
 syntax on
 filetype plugin indent on
