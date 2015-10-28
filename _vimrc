@@ -6,6 +6,38 @@
 
 " Not compatible with vi
 set nocompatible
+" Vundle Install Part
+call vundle#begin()
+
+" Common Plugins
+Plugin 'gmarik/Vundle.vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'kongo2002/fsharp-vim'
+Plugin 'kien/ctrlp.vim'
+    "plugin 'kien/ctrlp.vim' configuration
+    let g:ctrlp_custom_ignore = {
+                \ 'dir' : '\v[\/](node_modules|_bower_components|packages|bin|obj)|(.git|.swp)$'
+                \ }
+Plugin 'scrooloose/nerdtree'
+    " plugin 'scrooloose/nerdtree" configuration
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif      
+Plugin 'itchyny/lightline.vim'
+Plugin 'bling/vim-bufferline'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+    " plugin 'plasticboy/vim-markdown' configuration
+    let g:vim_markdown_folding_disabled=1
+    au BufRead,BufNewFile *.md set filetype=markdown
+Plugin 'vim-scripts/SearchComplete'
+Plugin 'vim-scripts/surround.vim'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'vim-scripts/SyntaxAttr.vim'
+Plugin 'rking/ag.vim'
+Plugin 'PProvost/vim-ps1'
+    " plugin PProvost/vim-ps1 configuration
+    au BufRead,BufNewFile *.ps1 set filetype=ps1
+Plugin 'crusoexia/vim-monokai'
+call vundle#end()
 " save undo between open / close sessions, disable swap and set backup and
 " undo locations
 set noswapfile
@@ -81,6 +113,37 @@ vmap > >gv
 nnoremap <C-K><C-R> 1G=G
 inoremap <C-K><C-R> 1G=G
 vnoremap <C-K><C-R> 1G=G
+language messages en
+
+set encoding=utf-8
+" Setting the font to Consolas, 11 pt
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Consolas\ 11
+  else
+    set guifont=Consolas:h11
+  endif
+endif
+
+if !has("gui_running")
+    set term=xterm
+    set t_Co=256
+    let &t_AB="\e[48;5;%dm"
+    let &t_AF="\e[38;5;%dm"
+endif
+
+set number
+syntax on
+filetype plugin indent on
+
+" color scheme
+colorscheme monokai
+
+" show 100 characters column
+:set colorcolumn=100
+
+" highlight curren line 
+:set cursorline
 " fix issue with backspace before edit
 set backspace=indent,eol,start
 set tabstop=4
@@ -119,66 +182,3 @@ set history=1000
 set hidden
 "set shell=powershell
 "set shellcmdflag=-command
-language messages en
-
-set encoding=utf-8
-" Setting the font to Consolas, 11 pt
-if has("gui_running")
-  if has("gui_gtk2")
-    set guifont=Consolas\ 11
-  else
-    set guifont=Consolas:h11
-  endif
-endif
-
-if !has("gui_running")
-    set term=xterm
-    set t_Co=256
-    let &t_AB="\e[48;5;%dm"
-    let &t_AF="\e[38;5;%dm"
-endif
-
-set number
-syntax on
-filetype plugin indent on
-
-" color scheme
-colorscheme monokai
-
-" show 100 characters column
-:set colorcolumn=100
-
-" highlight curren line 
-:set cursorline
-" Vundle Install Part
-call vundle#begin()
-
-" Common Plugins
-Plugin 'gmarik/Vundle.vim'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'kongo2002/fsharp-vim'
-Plugin 'kien/ctrlp.vim'
-    "plugin 'kien/ctrlp.vim' configuration
-    let g:ctrlp_custom_ignore = {
-                \ 'dir' : '\v[\/](node_modules|_bower_components|packages|bin|obj)|(.git|.swp)$'
-                \ }
-Plugin 'scrooloose/nerdtree'
-    " plugin 'scrooloose/nerdtree" configuration
-    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif      
-Plugin 'itchyny/lightline.vim'
-Plugin 'bling/vim-bufferline'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-    " plugin 'plasticboy/vim-markdown' configuration
-    let g:vim_markdown_folding_disabled=1
-    au BufRead,BufNewFile *.md set filetype=markdown
-Plugin 'vim-scripts/SearchComplete'
-Plugin 'vim-scripts/surround.vim'
-Plugin 'vim-scripts/matchit.zip'
-Plugin 'vim-scripts/SyntaxAttr.vim'
-Plugin 'rking/ag.vim'
-Plugin 'PProvost/vim-ps1'
-    " plugin PProvost/vim-ps1 configuration
-    au BufRead,BufNewFile *.ps1 set filetype=ps1
-Plugin 'crusoexia/vim-monokai'
-call vundle#end()
