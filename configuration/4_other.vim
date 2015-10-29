@@ -14,7 +14,9 @@ set lazyredraw
 set ttyfast
 
 " set case sensitive search only if one of letters in pattern is uppercase
+" for vsvim we have to set ic as well
 set smartcase
+set ic
 
 " make sure that when searching result will be scrolled so it's at least 10
 " lines from the edge of the screen
