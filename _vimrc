@@ -192,5 +192,8 @@ set history=1000
 
 " allow openning new file without saving previous
 set hidden
+
+" aut read files if modified outside
+set autoread
 "set shell=powershell
 "set shellcmdflag=-command
