@@ -37,3 +37,6 @@ colorscheme monokai
 
 " highlight curren line 
 :set cursorline
+
+" cursorline config
+hi CursorLine term=NONE cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
