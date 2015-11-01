@@ -1,0 +1,141 @@
+" set time vim waits for next character
+set timeoutlen=400
+
+" set leader key
+let mapleader = "\<Space>"
+
+" BASIC
+nnoremap ; :
+vnoremap ; :
+nnoremap : ;
+vnoremap : ;
+
+" map leader i to esc
+inoremap 8 <ESC>
+inoremap 88 8
+
+" NERD Tree
+nnoremap <silent> <F4> :NERDTreeToggle<CR>
+nnoremap <silent> <F5> :NERDTreeFind<CR>
+
+" ctrl p
+nnoremap <leader>e :CtrlP .<cr>
+nnoremap <leader>E :CtrlP<cr>
+nnoremap <leader>b :CtrlPBuffer<cr>
+
+" fix ctrl p keys
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+" Copy and paste
+nnoremap <leader>y "+y
+nnoremap <leader>p "+p
+vnoremap <leader>y "+y
+vnoremap <leader>p "+p
+
+" Map cursor to move screen line wise not file line wise, good for long lines
+nnoremap k gk
+nnoremap j gj
+nnoremap gk k
+nnoremap gj j
+
+" easy window navigation
+nnoremap <silent> <c-l> <c-w>l
+nnoremap <silent> <c-j> <c-w>j
+nnoremap <silent> <c-h> <c-w>h
+nnoremap <silent> <c-k> <c-w>k
+
+" map standard undo
+:map <C-z> u
+
+" map angle brackets to preserve selection in visual mode
+vmap < <gv
+vmap > >gv
+
+" map tab to autocomplete in insert mode
+:imap <S-Tab> <C-P>
+
+" indent as in Visual Studio
+nnoremap <C-K><C-R> 1G=G
+inoremap <C-K><C-R> 1G=G
+vnoremap <C-K><C-R> 1G=G
+let isPowershell=$isPowershell
+let home=$HOME
+language messages en
+
+set encoding=utf-8
+" Setting the font to Consolas, 11 pt
+if has("gui_running")
+    " Make window maximixed for GVim
+    au GUIEnter * simalt ~x
+
+    " Remove toolbar and menubar
+    :set guioptions -=m 
+    :set guioptions -=T
+
+    " Set fonts
+    set guifont=Consolas:h11
+endif
+
+if !has("gui_running")
+    if !exists("compat")
+        set term=xterm
+        set t_Co=256
+        let &t_AB="\e[48;5;%dm"
+        let &t_AF="\e[38;5;%dm"
+    endif
+endif
+
+set number
+syntax on
+filetype plugin indent on
+
+" color scheme
+colorscheme monokai
+
+" show 100 characters column
+:set colorcolumn=100
+
+" highlight curren line 
+:set cursorline
+" fix issue with backspace before edit
+set backspace=indent,eol,start
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set smartindent
+set laststatus=2
+
+" no spell checker
+set nospell
+set incsearch 
+set lazyredraw
+set ttyfast
+
+" set case sensitive search only if one of letters in pattern is uppercase
+" for vsvim we have to set ic as well
+set smartcase
+set ic
+
+" make sure that when searching result will be scrolled so it's at least 10
+" lines from the edge of the screen
+set scrolloff=10
+
+" mouse support
+set mouse=a
+
+" split window to the right and below by default
+set splitright splitbelow
+
+" remove wrapping
+set nowrap
+
+" size of history
+set history=1000
+
+" allow openning new file without saving previous
+set hidden
+
+" aut read files if modified outside
+set autoread

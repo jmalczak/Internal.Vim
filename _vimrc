@@ -195,5 +195,3 @@ set hidden
 
 " aut read files if modified outside
 set autoread
-"set shell=powershell
-"set shellcmdflag=-command
