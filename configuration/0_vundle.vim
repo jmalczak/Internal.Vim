@@ -1,3 +1,6 @@
+" Make bundle work
+set rtp+=~\.vim\bundle\Vundle.vim
+
 " Vundle Install Part
 call vundle#begin()
 
