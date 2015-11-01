@@ -5,6 +5,14 @@ language messages en
 set encoding=utf-8
 " Setting the font to Consolas, 11 pt
 if has("gui_running")
+    " Make window maximixed for GVim
+    au GUIEnter * simalt ~x
+
+    " Remove toolbar and menubar
+    :set guioptions -=m 
+    :set guioptions -=T
+
+    " Set fonts
     set guifont=Consolas:h11
 endif
 
