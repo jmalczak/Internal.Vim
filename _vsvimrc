@@ -2,9 +2,6 @@
 " Author: Jakub Malczak                           "
 " Homepage: http://malczak.net                    "
 "-------------------------------------------------"
-
-" Not compatible with vi
-set nocompatible
 " set time vim waits for next character
 set timeoutlen=400
 

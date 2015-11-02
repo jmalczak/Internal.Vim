@@ -2,8 +2,7 @@
 " Author: Jakub Malczak                           "
 " Homepage: http://malczak.net                    "
 "-------------------------------------------------"
-
-" Not compatible with vi
+" set not compatible with vi
 set nocompatible
 " Make bundle work
 set rtp+=~\.vim\bundle\Vundle.vim

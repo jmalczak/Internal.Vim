@@ -1,3 +1,5 @@
+" set not compatible with vi
+set nocompatible
 " Make bundle work
 set rtp+=~\.vim\bundle\Vundle.vim
 
