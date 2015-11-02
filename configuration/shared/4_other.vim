@@ -4,14 +4,8 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-set smartindent
 set laststatus=2
-
-" no spell checker
-set nospell
 set incsearch 
-set lazyredraw
-set ttyfast
 
 " set case sensitive search only if one of letters in pattern is uppercase
 " for vsvim we have to set ic as well
@@ -22,23 +16,8 @@ set ic
 " lines from the edge of the screen
 set scrolloff=10
 
-" mouse support
-set mouse=a
-
-" split window to the right and below by default
-set splitright splitbelow
-
 " remove wrapping
 set nowrap
 
 " size of history
 set history=1000
-
-" allow openning new file without saving previous
-set hidden
-
-" aut read files if modified outside
-set autoread
-
-" add relative line numbers
-set rnu
