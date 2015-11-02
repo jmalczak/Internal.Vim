@@ -59,3 +59,13 @@ vmap > >gv
 nnoremap <C-K><C-R> 1G=G
 inoremap <C-K><C-R> 1G=G
 vnoremap <C-K><C-R> 1G=G
+
+" disable arrows
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
