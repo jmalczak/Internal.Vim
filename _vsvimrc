@@ -32,9 +32,10 @@ cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
 " Copy and paste
-nnoremap <leader>y "+y
+vmap y ygv<ESC>
+nnoremap <leader>y "+ygv<ESC>
 nnoremap <leader>p "+p
-vnoremap <leader>y "+y
+vnoremap <leader>y "+ygv<ESC>
 vnoremap <leader>p "+p
 
 " Map cursor to move screen line wise not file line wise, good for long lines
