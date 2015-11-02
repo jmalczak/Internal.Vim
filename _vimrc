@@ -56,7 +56,7 @@ if !isdirectory(&undodir)
   call mkdir(&undodir, "p")
 endif
 " set time vim waits for next character
-set timeoutlen=400
+set timeoutlen=200
 
 " set leader key
 let mapleader = "\<Space>"
@@ -67,9 +67,8 @@ vnoremap ; :
 nnoremap : ;
 vnoremap : ;
 
-" map leader i to esc
-inoremap 8 <ESC>
-inoremap 88 8
+" map esc
+inoremap jk <ESC>
 
 " NERD Tree
 nnoremap <silent> <F4> :NERDTreeToggle<CR>
