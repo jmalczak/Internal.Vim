@@ -198,3 +198,6 @@ set hidden
 
 " aut read files if modified outside
 set autoread
+
+" add relative line numbers
+set rnu
