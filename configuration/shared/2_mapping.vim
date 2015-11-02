@@ -46,14 +46,14 @@ nnoremap <silent> <c-h> <c-w>h
 nnoremap <silent> <c-k> <c-w>k
 
 " map standard undo
-:map <C-z> u
+map <C-z> u
 
 " map angle brackets to preserve selection in visual mode
 vmap < <gv
 vmap > >gv
 
 " map tab to autocomplete in insert mode
-:imap <S-Tab> <C-P>
+imap <S-Tab> <C-P>
 
 " indent as in Visual Studio
 nnoremap <C-K><C-R> 1G=G

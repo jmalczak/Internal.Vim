@@ -104,14 +104,14 @@ nnoremap <silent> <c-h> <c-w>h
 nnoremap <silent> <c-k> <c-w>k
 
 " map standard undo
-:map <C-z> u
+map <C-z> u
 
 " map angle brackets to preserve selection in visual mode
 vmap < <gv
 vmap > >gv
 
 " map tab to autocomplete in insert mode
-:imap <S-Tab> <C-P>
+imap <S-Tab> <C-P>
 
 " indent as in Visual Studio
 nnoremap <C-K><C-R> 1G=G
@@ -127,6 +127,8 @@ inoremap <Up> <NOP>
 inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
+syntax on
+filetype plugin indent on
 let isPowershell=$isPowershell
 let home=$HOME
 language messages en
@@ -138,8 +140,8 @@ if has("gui_running")
     au GUIEnter * simalt ~x
 
     " Remove toolbar and menubar
-    :set guioptions -=m 
-    :set guioptions -=T
+    set guioptions -=m 
+    set guioptions -=T
 
     " Set fonts
     set guifont=Consolas:h11
@@ -158,16 +160,14 @@ endif
 colorscheme monokai
 
 " show 100 characters column
-:set colorcolumn=100
+set colorcolumn=100
 
 " highlight curren line 
-:set cursorline
+set cursorline
 
 " cursorline config
 hi CursorLine term=NONE cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 set number
-syntax on
-filetype plugin indent on
 " allow openning new file without saving previous
 set hidden
 

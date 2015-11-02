@@ -1,3 +1,5 @@
+syntax on
+filetype plugin indent on
 let isPowershell=$isPowershell
 let home=$HOME
 language messages en
@@ -9,8 +11,8 @@ if has("gui_running")
     au GUIEnter * simalt ~x
 
     " Remove toolbar and menubar
-    :set guioptions -=m 
-    :set guioptions -=T
+    set guioptions -=m 
+    set guioptions -=T
 
     " Set fonts
     set guifont=Consolas:h11
@@ -29,10 +31,10 @@ endif
 colorscheme monokai
 
 " show 100 characters column
-:set colorcolumn=100
+set colorcolumn=100
 
 " highlight curren line 
-:set cursorline
+set cursorline
 
 " cursorline config
 hi CursorLine term=NONE cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
