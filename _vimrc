@@ -39,6 +39,8 @@ Plugin 'PProvost/vim-ps1'
     " plugin PProvost/vim-ps1 configuration
     au BufRead,BufNewFile *.ps1 set filetype=ps1
 Plugin 'crusoexia/vim-monokai'
+Plugin 'scrooloose/nerdcommenter'
+
 call vundle#end()
 " save undo between open / close sessions, disable swap and set backup and
 " undo locations
