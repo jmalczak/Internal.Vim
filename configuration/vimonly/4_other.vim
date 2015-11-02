@@ -22,3 +22,6 @@ set smartindent
 
 " no spell checker
 set nospell
+
+" no show match
+set noshowmatch
