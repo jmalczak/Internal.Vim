@@ -42,19 +42,15 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'OmniSharp/omnisharp-vim'
     " plugin OmniSharp/omnisharp-vim confguration
     autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
-    autocmd FileType cs nnoremap <leader>b :wa!<cr>:OmniSharpBuildAsync<cr>
     autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
-    set completeopt=longest,menuone,preview
+    set completeopt=longest
 Plugin 'tpope/vim-dispatch'
 Plugin 'scrooloose/syntastic'
     " plugin scrooloose/syntastic configuration
     let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
-    set statusline+=%#warningmsg#
-    set statusline+=%{SyntasticStatuslineFlag()}
-    set statusline+=%*
-
-    let g:syntastic_always_populate_loc_list = 0
-    let g:syntastic_auto_loc_list = 0 
+    let g:syntastic_aggregate_errors = 1
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 1
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
 call vundle#end()
@@ -72,6 +68,8 @@ endif
 if !isdirectory(&undodir)
   call mkdir(&undodir, "p")
 endif
+" omnisharp build mapping
+autocmd FileType cs nnoremap <leader>bu :wa!<cr>:OmniSharpBuild<cr>
 " set time vim waits for next character
 set timeoutlen=200
 
