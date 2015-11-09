@@ -39,11 +39,6 @@ Plugin 'PProvost/vim-ps1'
     au BufRead,BufNewFile *.ps1 set filetype=ps1
 Plugin 'crusoexia/vim-monokai'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'OmniSharp/omnisharp-vim'
-    " plugin OmniSharp/omnisharp-vim confguration
-    autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
-    autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
-    set completeopt=longest
 Plugin 'tpope/vim-dispatch'
 Plugin 'scrooloose/syntastic'
     " plugin scrooloose/syntastic configuration
