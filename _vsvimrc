@@ -73,6 +73,10 @@ inoremap <Up> <NOP>
 inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
+
+" buffers switch
+nnoremap <leader>n :bnext<CR>
+nnoremap <leader>m :bprev<CR>
 set number
 " fix issue with backspace before edit
 set backspace=indent,eol,start

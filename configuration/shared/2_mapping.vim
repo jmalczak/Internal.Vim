@@ -69,3 +69,7 @@ inoremap <Up> <NOP>
 inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
+
+" buffers switch
+nnoremap <leader>n :bnext<CR>
+nnoremap <leader>m :bprev<CR>
