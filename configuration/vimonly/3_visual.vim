@@ -31,7 +31,7 @@ endif
 colorscheme monokai
 
 " show 100 characters column
-set colorcolumn=100
+"set colorcolumn=100
 
 " highlight curren line 
 set cursorline
