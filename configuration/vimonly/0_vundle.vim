@@ -1,3 +1,9 @@
+" set time vim waits for next character
+set timeoutlen=200
+
+" set leader key
+let mapleader = "\<Space>"
+
 " set not compatible with vi
 set nocompatible
 " Make bundle work
