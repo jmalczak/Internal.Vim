@@ -6,7 +6,7 @@
 set timeoutlen=200
 
 " set leader key
-let mapleader = "\<Space>"
+let mapleader = "\,"
 
 " set not compatible with vi
 set nocompatible
