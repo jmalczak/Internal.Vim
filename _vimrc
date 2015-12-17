@@ -91,10 +91,10 @@ nnoremap <leader>b :CtrlPBuffer<cr>
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 " set time vim waits for next character
-set timeoutlen=200
+set timeoutlen=300
 
 " set leader key
-let mapleader = "\<Space>"
+let mapleader = "\,"
 
 " BASIC
 nnoremap ; :
