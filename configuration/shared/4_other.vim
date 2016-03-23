@@ -21,3 +21,6 @@ set nowrap
 
 " size of history
 set history=1000
+
+" set filetypes
+au BufNewFile,BufRead *.ejs set filetype=html
