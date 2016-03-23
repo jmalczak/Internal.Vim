@@ -83,13 +83,16 @@ nnoremap <silent> <F4> :NERDTreeToggle<CR>
 nnoremap <silent> <F5> :NERDTreeFind<CR>
 
 " ctrl p
-nnoremap <leader>e :CtrlP .<cr>
-nnoremap <leader>E :CtrlP<cr>
-nnoremap <leader>b :CtrlPBuffer<cr>
+nnoremap <leader>e :CtrlP .<CR>
+nnoremap <leader>E :CtrlP<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
 
 " fix ctrl p keys
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+
+" json pretty format using python
+nnoremap <leader>j :%!python -m json.tool<CR>
 " set time vim waits for next character
 set timeoutlen=500
 
