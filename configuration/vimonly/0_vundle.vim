@@ -39,7 +39,6 @@ Plugin 'rking/ag.vim'
 Plugin 'PProvost/vim-ps1'
     " plugin PProvost/vim-ps1 configuration
     au BufRead,BufNewFile *.ps1 set filetype=ps1
-Plugin 'crusoexia/vim-monokai'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-dispatch'
 Plugin 'scrooloose/syntastic'
@@ -50,4 +49,5 @@ Plugin 'scrooloose/syntastic'
     let g:syntastic_auto_loc_list = 1
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 call vundle#end()

@@ -28,13 +28,11 @@ if !has("gui_running")
 endif
 
 " color scheme
-colorscheme monokai
-
-" show 100 characters column
-"set colorcolumn=100
+colorscheme dracula
 
 " highlight curren line 
 set cursorline
 
 " cursorline config
 hi CursorLine term=NONE cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+hi Visual ctermfg=NONE ctermbg=240 cterm=NONE guifg=NONE guibg=#44475a gui=NONE

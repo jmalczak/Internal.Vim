@@ -43,7 +43,6 @@ Plugin 'rking/ag.vim'
 Plugin 'PProvost/vim-ps1'
     " plugin PProvost/vim-ps1 configuration
     au BufRead,BufNewFile *.ps1 set filetype=ps1
-Plugin 'crusoexia/vim-monokai'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-dispatch'
 Plugin 'scrooloose/syntastic'
@@ -54,6 +53,7 @@ Plugin 'scrooloose/syntastic'
     let g:syntastic_auto_loc_list = 1
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 call vundle#end()
 " save undo between open / close sessions, disable swap and set backup and
 " undo locations
@@ -179,25 +179,20 @@ if !has("gui_running")
 endif
 
 " color scheme
-colorscheme monokai
-
-" show 100 characters column
-"set colorcolumn=100
+colorscheme dracula
 
 " highlight curren line 
 set cursorline
 
 " cursorline config
 hi CursorLine term=NONE cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+hi Visual ctermfg=NONE ctermbg=240 cterm=NONE guifg=NONE guibg=#44475a gui=NONE
 set number
 " allow openning new file without saving previous
 set hidden
 
 " aut read files if modified outside
 set autoread
-
-" add relative line numbers
-set rnu
 
 " mouse support
 set mouse=a
