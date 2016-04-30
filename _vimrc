@@ -1,7 +1,7 @@
-"-------------------------------------------------"
-" Author: Jakub Malczak                           "
-" Homepage: http://malczak.net                    "
-"-------------------------------------------------"
+"----------------------------------------------------------------------------"
+" Author: Jakub Malczak                                                      "
+" Homepage: http://malczak.net, http://chillisoftware.net                    "
+"----------------------------------------------------------------------------"
 " set time vim waits for next character
 set timeoutlen=200
 
