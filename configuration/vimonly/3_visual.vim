@@ -2,7 +2,7 @@ syntax on
 filetype plugin indent on
 let isPowershell=$isPowershell
 let home=$HOME
-language messages en
+language messages en_US.UTF-8
 
 set encoding=utf-8
 " Setting the font to Consolas, 11 pt
