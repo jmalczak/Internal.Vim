@@ -26,6 +26,7 @@ Plugin 'kien/ctrlp.vim'
                 \ 'dir' : '\v[\/](node_modules|_bower_components|packages|bin|obj)|(.git|.swp)$'
                 \ }
 Plugin 'scrooloose/nerdtree'
+    let NERDTreeIgnore = ['\.pyc$']
     " plugin 'scrooloose/nerdtree" configuration
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif      
 Plugin 'itchyny/lightline.vim'
