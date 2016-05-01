@@ -244,3 +244,7 @@ set history=1000
 
 " set filetypes
 au BufNewFile,BufRead *.ejs set filetype=html
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
