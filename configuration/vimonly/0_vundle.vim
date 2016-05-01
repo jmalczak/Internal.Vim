@@ -51,4 +51,6 @@ Plugin 'scrooloose/syntastic'
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'tmhedberg/SimpylFold'
+
 call vundle#end()

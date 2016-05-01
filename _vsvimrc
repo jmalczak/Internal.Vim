@@ -58,6 +58,9 @@ inoremap <Right> <NOP>
 " buffers switch
 nnoremap <leader>n :bnext<CR>
 nnoremap <leader>m :bprev<CR>
+
+" Fold
+nnoremap <space> za
 set number
 " fix issue with backspace before edit
 set backspace=indent,eol,start

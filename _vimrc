@@ -55,6 +55,8 @@ Plugin 'scrooloose/syntastic'
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'tmhedberg/SimpylFold'
+
 call vundle#end()
 " save undo between open / close sessions, disable swap and set backup and
 " undo locations
@@ -150,6 +152,9 @@ inoremap <Right> <NOP>
 " buffers switch
 nnoremap <leader>n :bnext<CR>
 nnoremap <leader>m :bprev<CR>
+
+" Fold
+nnoremap <space> za
 syntax on
 filetype plugin indent on
 let isPowershell=$isPowershell

@@ -54,3 +54,6 @@ inoremap <Right> <NOP>
 " buffers switch
 nnoremap <leader>n :bnext<CR>
 nnoremap <leader>m :bprev<CR>
+
+" Fold
+nnoremap <space> za
