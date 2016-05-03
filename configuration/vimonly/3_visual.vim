@@ -34,5 +34,5 @@ colorscheme dracula
 set cursorline
 
 " cursorline config
-hi CursorLine term=NONE cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 hi Visual ctermfg=NONE ctermbg=240 cterm=NONE guifg=NONE guibg=#44475a gui=NONE
