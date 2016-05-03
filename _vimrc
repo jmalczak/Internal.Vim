@@ -160,7 +160,7 @@ syntax on
 filetype plugin indent on
 let isPowershell=$isPowershell
 let home=$HOME
-language messages en_US.UTF-8
+language messages gen_US.UTF-8
 
 set encoding=utf-8
 " Setting the font to Consolas, 11 pt
@@ -192,7 +192,7 @@ colorscheme dracula
 set cursorline
 
 " cursorline config
-hi CursorLine cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+hi CursorLine cterm=NONE ctermbg=darkgray ctermfg=white guibg=darkgray guifg=white
 hi Visual ctermfg=NONE ctermbg=240 cterm=NONE guifg=NONE guibg=#44475a gui=NONE
 set number
 " allow openning new file without saving previous
