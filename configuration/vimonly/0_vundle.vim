@@ -19,7 +19,7 @@ Plugin 'kongo2002/fsharp-vim'
 Plugin 'kien/ctrlp.vim'
     "plugin 'kien/ctrlp.vim' configuration
     let g:ctrlp_custom_ignore = {
-                \ 'dir' : '\v[\/](node_modules|_bower_components|packages|bin|obj)|(.git|.swp)$'
+                \ 'dir' : '\v[\/](node_modules|_bower_components|packages|bin|obj)|(.git|.swp)|(*.pyc)$'
                 \ }
 Plugin 'scrooloose/nerdtree'
     let NERDTreeIgnore = ['\.pyc$', '\.sln$', '\.pyproj$', '\.DotSettings$']
@@ -43,15 +43,8 @@ Plugin 'PProvost/vim-ps1'
     au BufRead,BufNewFile *.ps1 set filetype=ps1
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-dispatch'
-Plugin 'scrooloose/syntastic'
-    " plugin scrooloose/syntastic configuration
-    let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
-    let g:syntastic_aggregate_errors = 1
-    let g:syntastic_always_populate_loc_list = 1
-    let g:syntastic_auto_loc_list = 1
-    let g:syntastic_check_on_open = 1
-    let g:syntastic_check_on_wq = 0
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 Plugin 'tmhedberg/SimpylFold'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()

@@ -3,101 +3,6 @@
 " Homepage: http://malczak.net, http://chillisoftware.net                    "
 "----------------------------------------------------------------------------"
 " set time vim waits for next character
-set timeoutlen=200
-
-" set leader key
-let mapleader = "\,"
-
-" set not compatible with vi
-set nocompatible
-" Make bundle work
-set rtp+=~/.vim/bundle/Vundle.vim
-
-" Vundle Install Part
-call vundle#begin()
-
-" Common Plugins
-Plugin 'gmarik/Vundle.vim'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'kongo2002/fsharp-vim'
-Plugin 'kien/ctrlp.vim'
-    "plugin 'kien/ctrlp.vim' configuration
-    let g:ctrlp_custom_ignore = {
-                \ 'dir' : '\v[\/](node_modules|_bower_components|packages|bin|obj)|(.git|.swp)$'
-                \ }
-Plugin 'scrooloose/nerdtree'
-    let NERDTreeIgnore = ['\.pyc$', '\.sln$', '\.pyproj$', '\.DotSettings$']
-    " plugin 'scrooloose/nerdtree" configuration
-    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-Plugin 'itchyny/lightline.vim'
-Plugin 'bling/vim-bufferline'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-    " plugin 'plasticboy/vim-markdown' configuration
-    let g:vim_markdown_folding_disabled=1
-    au BufRead,BufNewFile *.md set filetype=markdown
-Plugin 'vim-scripts/SearchComplete'
-Plugin 'vim-scripts/surround.vim'
-Plugin 'vim-scripts/matchit.zip'
-Plugin 'vim-scripts/SyntaxAttr.vim'
-Plugin 'rking/ag.vim'
-Plugin 'PProvost/vim-ps1'
-    " plugin PProvost/vim-ps1 configuration
-    au BufRead,BufNewFile *.ps1 set filetype=ps1
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'tpope/vim-dispatch'
-Plugin 'scrooloose/syntastic'
-    " plugin scrooloose/syntastic configuration
-    let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
-    let g:syntastic_aggregate_errors = 1
-    let g:syntastic_always_populate_loc_list = 1
-    let g:syntastic_auto_loc_list = 1
-    let g:syntastic_check_on_open = 1
-    let g:syntastic_check_on_wq = 0
-Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-Plugin 'tmhedberg/SimpylFold'
-
-call vundle#end()
-" save undo between open / close sessions, disable swap and set backup and
-" undo locations
-set noswapfile
-set backup
-set undofile
-set backupdir=~/.vim/dirs/backup
-set undodir=~/.vim/dirs/undo
-
-if !isdirectory(&backupdir)
-  call mkdir(&backupdir, "p")
-endif
-if !isdirectory(&undodir)
-  call mkdir(&undodir, "p")
-endif
-" omnisharp build mapping
-autocmd FileType cs nnoremap <leader>bu :wa!<cr>:OmniSharpBuild<cr>
-
-" easy window navigation
-nnoremap <silent> <c-l> <c-w>l
-nnoremap <silent> <c-j> <c-w>j
-nnoremap <silent> <c-h> <c-w>h
-nnoremap <silent> <c-k> <c-w>k
-
-" NERD Tree
-nnoremap <silent> <F4> :NERDTreeToggle<CR>
-nnoremap <silent> <F5> :NERDTreeFind<CR>
-
-" ctrl p
-nnoremap <leader>e :CtrlP .<CR>
-nnoremap <leader>E :CtrlP<CR>
-nnoremap <leader>b :CtrlPBuffer<CR>
-
-" fix ctrl p keys
-cnoremap <C-p> <Up>
-cnoremap <C-n> <Down>
-
-" json pretty format using python
-nnoremap <leader>j :%!python -m json.tool<CR>
-" set time vim waits for next character
 set timeoutlen=500
 
 " set leader key
@@ -156,6 +61,125 @@ nnoremap <leader>m :bprev<CR>
 
 " Fold
 nnoremap <space> za
+set number
+" fix issue with backspace before edit
+set backspace=indent,eol,start
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set laststatus=2
+set incsearch 
+
+" set case sensitive search only if one of letters in pattern is uppercase
+" for vsvim we have to set ic as well
+set smartcase
+set ic
+
+" make sure that when searching result will be scrolled so it's at least 10
+" lines from the edge of the screen
+set scrolloff=10
+
+" remove wrapping
+set nowrap
+
+" size of history
+set history=1000
+
+" set filetypes
+au BufNewFile,BufRead *.ejs set filetype=html
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+" set time vim waits for next character
+set timeoutlen=200
+
+" set leader key
+let mapleader = "\,"
+
+" set not compatible with vi
+set nocompatible
+" Make bundle work
+set rtp+=~/.vim/bundle/Vundle.vim
+
+" Vundle Install Part
+call vundle#begin()
+
+" Common Plugins
+Plugin 'gmarik/Vundle.vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'kongo2002/fsharp-vim'
+Plugin 'kien/ctrlp.vim'
+    "plugin 'kien/ctrlp.vim' configuration
+    let g:ctrlp_custom_ignore = {
+                \ 'dir' : '\v[\/](node_modules|_bower_components|packages|bin|obj)|(.git|.swp)|(*.pyc)$'
+                \ }
+Plugin 'scrooloose/nerdtree'
+    let NERDTreeIgnore = ['\.pyc$', '\.sln$', '\.pyproj$', '\.DotSettings$']
+    " plugin 'scrooloose/nerdtree" configuration
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+Plugin 'itchyny/lightline.vim'
+Plugin 'bling/vim-bufferline'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+    " plugin 'plasticboy/vim-markdown' configuration
+    let g:vim_markdown_folding_disabled=1
+    au BufRead,BufNewFile *.md set filetype=markdown
+Plugin 'vim-scripts/SearchComplete'
+Plugin 'vim-scripts/surround.vim'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'vim-scripts/SyntaxAttr.vim'
+Plugin 'rking/ag.vim'
+Plugin 'PProvost/vim-ps1'
+    " plugin PProvost/vim-ps1 configuration
+    au BufRead,BufNewFile *.ps1 set filetype=ps1
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-dispatch'
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'Valloric/YouCompleteMe'
+
+call vundle#end()
+" save undo between open / close sessions, disable swap and set backup and
+" undo locations
+set noswapfile
+set backup
+set undofile
+set backupdir=~/.vim/dirs/backup
+set undodir=~/.vim/dirs/undo
+
+if !isdirectory(&backupdir)
+  call mkdir(&backupdir, "p")
+endif
+if !isdirectory(&undodir)
+  call mkdir(&undodir, "p")
+endif
+" omnisharp build mapping
+autocmd FileType cs nnoremap <leader>bu :wa!<cr>:OmniSharpBuild<cr>
+
+" easy window navigation
+nnoremap <silent> <c-l> <c-w>l
+nnoremap <silent> <c-j> <c-w>j
+nnoremap <silent> <c-h> <c-w>h
+nnoremap <silent> <c-k> <c-w>k
+
+" NERD Tree
+nnoremap <silent> <F4> :NERDTreeToggle<CR>
+nnoremap <silent> <F5> :NERDTreeFind<CR>
+
+" ctrl p
+nnoremap <leader>e :CtrlP .<CR>
+nnoremap <leader>E :CtrlP<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
+
+" fix ctrl p keys
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+" json pretty format using python
+nnoremap <leader>j :%!python -m json.tool<CR>
 syntax on
 filetype plugin indent on
 let isPowershell=$isPowershell
@@ -194,7 +218,6 @@ set cursorline
 " cursorline config
 hi CursorLine cterm=NONE ctermbg=darkgray ctermfg=white guibg=darkgray guifg=white
 hi Visual ctermfg=NONE ctermbg=240 cterm=NONE guifg=NONE guibg=#44475a gui=NONE
-set number
 " allow openning new file without saving previous
 set hidden
 
@@ -219,33 +242,3 @@ set nospell
 
 " no show match
 set noshowmatch
-" fix issue with backspace before edit
-set backspace=indent,eol,start
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-set laststatus=2
-set incsearch 
-
-" set case sensitive search only if one of letters in pattern is uppercase
-" for vsvim we have to set ic as well
-set smartcase
-set ic
-
-" make sure that when searching result will be scrolled so it's at least 10
-" lines from the edge of the screen
-set scrolloff=10
-
-" remove wrapping
-set nowrap
-
-" size of history
-set history=1000
-
-" set filetypes
-au BufNewFile,BufRead *.ejs set filetype=html
-
-" Enable folding
-set foldmethod=indent
-set foldlevel=99
