@@ -43,7 +43,7 @@ Plugin 'PProvost/vim-ps1'
     au BufRead,BufNewFile *.ps1 set filetype=ps1
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-dispatch'
-Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'jmalczak/dracula-theme', {'rtp': 'vim/'}
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'Valloric/YouCompleteMe'
 
