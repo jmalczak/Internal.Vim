@@ -22,3 +22,9 @@ cnoremap <C-n> <Down>
 
 " json pretty format using python
 nnoremap <leader>j :%!python -m json.tool<CR>
+
+" nerd commenter
+nnoremap <leader>c :call NERDComment(0, "comment")<CR>
+nnoremap <leader>u :call NERDComment(0, "uncomment")<CR>
+vnoremap <leader>c :call NERDComment(0, "comment")<CR>
+vnoremap <leader>u :call NERDComment(0, "uncomment")<CR>
