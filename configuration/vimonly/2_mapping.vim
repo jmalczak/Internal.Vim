@@ -24,7 +24,5 @@ cnoremap <C-n> <Down>
 nnoremap <leader>j :%!python -m json.tool<CR>
 
 " nerd commenter
-nnoremap <leader>c :call NERDComment(0, "comment")<CR>
-nnoremap <leader>u :call NERDComment(0, "uncomment")<CR>
-vnoremap <leader>c :call NERDComment(0, "comment")<CR>
-vnoremap <leader>u :call NERDComment(0, "uncomment")<CR>
+nnoremap <leader>t :call NERDComment(0, "toggle")<CR>
+vnoremap <leader>t :call NERDComment(0, "toggle")<CR>
