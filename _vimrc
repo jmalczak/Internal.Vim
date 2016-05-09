@@ -3,6 +3,96 @@
 " Homepage: http://malczak.net, http://chillisoftware.net                    "
 "----------------------------------------------------------------------------"
 " set time vim waits for next character
+set timeoutlen=500
+
+" set leader key
+let mapleader = "\,"
+
+" BASIC
+nnoremap ; :
+vnoremap ; :
+nnoremap : ;
+vnoremap : ;
+
+" map esc
+inoremap jk <ESC>
+
+" Copy and paste
+vmap y ygv<ESC>
+nnoremap <leader>y "+ygv<ESC>
+nnoremap <leader>p "+p
+vnoremap <leader>y "+ygv<ESC>
+vnoremap <leader>p "+p
+
+" Map cursor to move screen line wise not file line wise, good for long lines
+nnoremap k gk
+nnoremap j gj
+nnoremap gk k
+nnoremap gj j
+
+" map standard undo
+map <C-z> u
+
+" map angle brackets to preserve selection in visual mode
+vmap < <gv
+vmap > >gv
+
+" map tab to autocomplete in insert mode
+imap <S-Tab> <C-P>
+
+" indent as in Visual Studio
+nnoremap <C-K><C-R> 1G=G
+inoremap <C-K><C-R> 1G=G
+vnoremap <C-K><C-R> 1G=G
+
+" disable arrows
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
+
+" buffers switch
+nnoremap <leader>n :bnext<CR>
+nnoremap <leader>m :bprev<CR>
+
+" Fold
+nnoremap <space> za
+set number
+" fix issue with backspace before edit
+set backspace=indent,eol,start
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set laststatus=2
+set incsearch 
+
+" set case sensitive search only if one of letters in pattern is uppercase
+" for vsvim we have to set ic as well
+set smartcase
+set ic
+
+" make sure that when searching result will be scrolled so it's at least 10
+" lines from the edge of the screen
+set scrolloff=10
+
+" remove wrapping
+set nowrap
+
+" size of history
+set history=1000
+
+" set filetypes
+au BufNewFile,BufRead *.ejs set filetype=html
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+" set time vim waits for next character
 set timeoutlen=200
 
 " set leader key
@@ -23,7 +113,8 @@ Plugin 'kongo2002/fsharp-vim'
 Plugin 'kien/ctrlp.vim'
     "plugin 'kien/ctrlp.vim' configuration
     let g:ctrlp_custom_ignore = {
-                \ 'dir' : '\v[\/](node_modules|_bower_components|packages|bin|obj)|(.git|.swp)|(*.pyc)$'
+                \ 'dir' : '\v[\/](node_modules|_bower_components|packages|bin|obj)|(.git|.swp)|(.pyc)$',
+                \ 'file' : '\v\.(pyc|swp)$'
                 \ }
 Plugin 'scrooloose/nerdtree'
     let NERDTreeIgnore = ['\.pyc$', '\.sln$', '\.pyproj$', '\.DotSettings$', '\.(node_modules|bower_components)$']
@@ -90,65 +181,10 @@ cnoremap <C-n> <Down>
 
 " json pretty format using python
 nnoremap <leader>j :%!python -m json.tool<CR>
-" set time vim waits for next character
-set timeoutlen=500
 
-" set leader key
-let mapleader = "\,"
-
-" BASIC
-nnoremap ; :
-vnoremap ; :
-nnoremap : ;
-vnoremap : ;
-
-" map esc
-inoremap jk <ESC>
-
-" Copy and paste
-vmap y ygv<ESC>
-nnoremap <leader>y "+ygv<ESC>
-nnoremap <leader>p "+p
-vnoremap <leader>y "+ygv<ESC>
-vnoremap <leader>p "+p
-
-" Map cursor to move screen line wise not file line wise, good for long lines
-nnoremap k gk
-nnoremap j gj
-nnoremap gk k
-nnoremap gj j
-
-" map standard undo
-map <C-z> u
-
-" map angle brackets to preserve selection in visual mode
-vmap < <gv
-vmap > >gv
-
-" map tab to autocomplete in insert mode
-imap <S-Tab> <C-P>
-
-" indent as in Visual Studio
-nnoremap <C-K><C-R> 1G=G
-inoremap <C-K><C-R> 1G=G
-vnoremap <C-K><C-R> 1G=G
-
-" disable arrows
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
-
-" buffers switch
-nnoremap <leader>n :bnext<CR>
-nnoremap <leader>m :bprev<CR>
-
-" Fold
-nnoremap <space> za
+" nerd commenter
+nnoremap <leader>t :call NERDComment(0, "toggle")<CR>
+vnoremap <leader>t :call NERDComment(0, "toggle")<CR>
 syntax on
 filetype plugin indent on
 let isPowershell=$isPowershell
@@ -187,7 +223,6 @@ set cursorline
 " cursorline config
 hi CursorLine cterm=NONE ctermbg=darkblue ctermfg=white guibg=darkblue guifg=white
 hi Visual ctermfg=NONE ctermbg=240 cterm=NONE guifg=NONE guibg=#44475a gui=NONE
-set number
 " allow openning new file without saving previous
 set hidden
 
@@ -212,33 +247,3 @@ set nospell
 
 " no show match
 set noshowmatch
-" fix issue with backspace before edit
-set backspace=indent,eol,start
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-set laststatus=2
-set incsearch 
-
-" set case sensitive search only if one of letters in pattern is uppercase
-" for vsvim we have to set ic as well
-set smartcase
-set ic
-
-" make sure that when searching result will be scrolled so it's at least 10
-" lines from the edge of the screen
-set scrolloff=10
-
-" remove wrapping
-set nowrap
-
-" size of history
-set history=1000
-
-" set filetypes
-au BufNewFile,BufRead *.ejs set filetype=html
-
-" Enable folding
-set foldmethod=indent
-set foldlevel=99
