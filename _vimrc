@@ -27,7 +27,7 @@ Plugin 'kien/ctrlp.vim'
                 \ 'file' : '\v\.(pyc|swp)$'
                 \ }
 Plugin 'scrooloose/nerdtree'
-    let NERDTreeIgnore = ['\.pyc$', '\.sln$', '\.pyproj$', '\.DotSettings$', '\.(node_modules|bower_components)$']
+    let NERDTreeIgnore = ['\.pyc$', '\.sln$', '\.pyproj$', '\.DotSettings$', '.*node_modules.*$[[dir]]', '.*bower_components.*$[[dir]]','.*bin.*$[[dir]]']
     " plugin 'scrooloose/nerdtree" configuration
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
