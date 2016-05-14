@@ -24,6 +24,7 @@ Plugin 'kien/ctrlp.vim'
                 \ }
 Plugin 'scrooloose/nerdtree'
     let NERDTreeIgnore = ['\.pyc$', '\.sln$', '\.pyproj$', '\.DotSettings$']
+    let NERDTreeWinSize = 40
     " plugin 'scrooloose/nerdtree" configuration
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
