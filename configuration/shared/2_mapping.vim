@@ -1,5 +1,5 @@
 " set time vim waits for next character
-set timeoutlen=500
+set timeoutlen=800
 
 " set leader key
 let mapleader = "\,"
