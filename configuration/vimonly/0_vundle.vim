@@ -23,7 +23,7 @@ Plugin 'kien/ctrlp.vim'
                 \ 'file' : '\v\.(pyc|swp)$'
                 \ }
 Plugin 'scrooloose/nerdtree'
-    let NERDTreeIgnore = ['\.pyc$', '\.sln$', '\.pyproj$', '\.DotSettings$']
+    let NERDTreeIgnore = ['\.pyc$', '\.sln$', '\.pyproj$', '\.DotSettings$', '.*node_modules.*$[[dir]]', '.*bower_components.*$[[dir]]','.*bin.*$[[dir]]']
     let NERDTreeWinSize = 40
     " plugin 'scrooloose/nerdtree" configuration
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
