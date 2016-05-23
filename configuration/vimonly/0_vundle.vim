@@ -47,5 +47,6 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'jmalczak/dracula-theme', {'rtp': 'vim/'}
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'ternjs/tern_for_vim'
 
 call vundle#end()
