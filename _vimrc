@@ -51,8 +51,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-dispatch'
 Plugin 'jmalczak/dracula-theme', {'rtp': 'vim/'}
 Plugin 'tmhedberg/SimpylFold'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'ternjs/tern_for_vim'
 
 call vundle#end()
 " save undo between open / close sessions, disable swap and set backup and
@@ -186,7 +184,7 @@ if !has("gui_running")
 endif
 
 " color scheme
-colorscheme dracula
+" colorscheme dracula
 
 " highlight curren line 
 set cursorline
