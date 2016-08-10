@@ -49,7 +49,7 @@ Plugin 'PProvost/vim-ps1'
     au BufRead,BufNewFile *.ps1 set filetype=ps1
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-dispatch'
-Plugin 'jmalczak/dracula-theme', {'rtp': 'vim/'}
+Plugin 'dracula/vim'
 Plugin 'tmhedberg/SimpylFold'
 
 call vundle#end()
@@ -184,7 +184,7 @@ if !has("gui_running")
 endif
 
 " color scheme
-" colorscheme dracula
+colorscheme dracula
 
 " highlight curren line 
 set cursorline

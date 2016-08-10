@@ -28,7 +28,7 @@ if !has("gui_running")
 endif
 
 " color scheme
-" colorscheme dracula
+colorscheme dracula
 
 " highlight curren line 
 set cursorline
