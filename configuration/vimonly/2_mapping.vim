@@ -26,3 +26,7 @@ nnoremap <leader>j :%!python -m json.tool<CR>
 " nerd commenter
 nnoremap <leader>t :call NERDComment(0, "toggle")<CR>
 vnoremap <leader>t :call NERDComment(0, "toggle")<CR>
+
+" fix for conemu incorrect backspace handling
+inoremap <Char-0x07F> <BS>
+nnoremap <Char-0x07F> <BS>
